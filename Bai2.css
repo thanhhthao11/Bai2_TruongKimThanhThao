@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+body{
+    height: 100vh;
+    background: gainsboro;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    transition: 0.25s;
+}
+
+.image{
+    width: 20%;
+    height: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: -10px 0;
+}
+
+.image:hover img{
+    transform: scale(1.2);
+}
+
+.gallery{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(31 109 10);
+    display: flex;
+    align-items: center;
+    color: antiquewhite;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: 0.5s;
+}
+
+.close{
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    color: #d39090;
+    cursor: pointer;
+}
+
+.control {
+    font-size: 35px;
+    color: rgb(189, 135, 135);
+    position: absolute;
+}
+
+.control.prev {
+    left: 15px;    
+    border: none;
+    color: #d39090;
+    cursor:pointer;
+
+}
+
+.control.next {
+    right: 15px;
+    border: none;
+    color: #d39090;
+    cursor:pointer;
+}
+
+.gallery_inner {
+    width: 36%;
+    height: 85%;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.show {
+    opacity: 1; 
+    pointer-events: auto;
+    transform: scale(1);
+    z-index: 2;
+}
+.background
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/564x/1c/3a/c6/1c3ac6763bcf4786871ef9f10dcccbec.jpg');
+    background-size: cover;
+    filter: blur(10px);
+}
+.noidung {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
